@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'images.apps.ImagesConfig',
     'bootstrap3',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -77,7 +78,9 @@ WSGI_APPLICATION = 'unsplashlet.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'gallery',
+        'USER': 'levy',
+        'PASSWORD': 'newpassword',
     }
 }
 
@@ -106,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
