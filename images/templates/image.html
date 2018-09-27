@@ -1,1 +1,13 @@
-<h1>Welcome to my hood!</h1>
+{%extends 'base.html' %}
+{% block content %}
+{{block.super }}
+
+<div class="container">
+    {% for image_item in images %}
+    <div class="row">
+    <img src="{{image_item.image.url}}" class="img-responsive img-circle" alt="Image" >
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

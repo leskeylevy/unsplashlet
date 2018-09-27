@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'unsplashlet.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'gallery',
         'USER': 'levy',
         'PASSWORD': 'newpassword',
