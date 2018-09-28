@@ -5,7 +5,7 @@
 <div class="container">
     {% for item in images %}
     <div class="row">
-        <img width="500px" class="image-responisive" src="{{item.image.url}}"  alt="Image" data-toggle="modal" data-target="#exampleModalCenter{{item.images.id}}" >
+        <img width="500px" class="image-responsive" src="{{item.image.url}}"  alt="Image" data-toggle="modal" data-target="#exampleModalCenter{{item.images.id}}" >
     {% endfor %}
             <!-- Modal -->
         {% for item in images %}
@@ -19,7 +19,9 @@
         </button>
       </div>
       <div class="modal-body">
-        <img width="550px" class="image-responisive" src="{{item.image.url}}"  alt="Image" data-target="#exampleModalCenter{{item.images.id}}" >
+        <img width="550px" class="image-responsive" src="{{item.image.url}}"  alt="Image" data-target="#exampleModalCenter{{item.images.id}}" >
+        <p>{{item.description }}</p>
+          <label for="location"> Image location :{{item.location }}</label>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

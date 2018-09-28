@@ -4,7 +4,8 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns=[
-    url('^$',views.image,name='welcome'),
+    url(r'^$',views.image,name='welcome'),
+    # url(r'^image/(\d+)',views.imagealone,name='image_alone')
 ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
