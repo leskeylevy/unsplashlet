@@ -3,11 +3,11 @@
 {{block.super }}
 
 <div class="container">
-    {% for image_item in images %}
+    {% for item in images %}
     <div class="row">
-    <img src="{{image_item.image.url}}" class="img-responsive img-circle" alt="Image" >
+    <img class="image-responisive" src="{{item.image.url}}"  alt="Image" >
     </div>
     {% endfor %}
 </div>
-
+<h1>hello</h1>
 {% endblock %}
