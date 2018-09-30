@@ -46,6 +46,30 @@ class Image(models.Model):
     category = models.ManyToManyField(Category)
     pub_date = models.DateTimeField(auto_now_add=True)
 
-
-class Meta:
+    class Meta:
         ordering = ['pub_date']
+
+    def save_image(self):
+        self.save()
+
+    def delete_image(self):
+        self.delete()
+
+    @classmethod
+    def update_image(cls,id,update):
+        update_image=cls.objects.filter(id=id).update(target=update)
+        return update_image
+
+    @classmethod
+    def get_all(cls):
+        images = cls.objects.order_by('pub-date')
+        return images
+
+    @classmethod
+    def get_image(cls,id):
+        image = cls.objects.get(id=id)
+        return image
+    @classmethod
+    def searched(cls, query):
+        results = cls.objects.filter(image_searched=query).order_by('pub_date')
+        return results

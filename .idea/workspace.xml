@@ -44,7 +44,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="952" />
-          <entry key="py" value="1561" />
+          <entry key="py" value="1956" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -52,7 +52,7 @@
         <counts>
           <entry key="HTML" value="952" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="1561" />
+          <entry key="Python" value="1956" />
         </counts>
       </usages-collector>
     </session>
@@ -101,13 +101,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/images/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+            <state relative-caret-position="309">
+              <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
               <folding>
-                <marker date="1538295322551" expanded="true" signature="87:92" ph="..." />
-                <marker date="1538295322551" expanded="true" signature="297:406" ph="..." />
-                <marker date="1538295322551" expanded="true" signature="489:494" ph="..." />
-                <marker date="1538295322551" expanded="true" signature="699:812" ph="..." />
+                <marker date="1538296375886" expanded="true" signature="87:92" ph="..." />
+                <marker date="1538296375886" expanded="true" signature="297:406" ph="..." />
+                <marker date="1538296375886" expanded="true" signature="489:494" ph="..." />
+                <marker date="1538296375886" expanded="true" signature="699:812" ph="..." />
+                <marker date="1538296375886" expanded="true" signature="1381:1484" ph="..." />
               </folding>
             </state>
           </provider>
@@ -352,13 +353,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/images/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        <state relative-caret-position="309">
+          <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
           <folding>
-            <marker date="1538295322551" expanded="true" signature="87:92" ph="..." />
-            <marker date="1538295322551" expanded="true" signature="297:406" ph="..." />
-            <marker date="1538295322551" expanded="true" signature="489:494" ph="..." />
-            <marker date="1538295322551" expanded="true" signature="699:812" ph="..." />
+            <marker date="1538296375886" expanded="true" signature="87:92" ph="..." />
+            <marker date="1538296375886" expanded="true" signature="297:406" ph="..." />
+            <marker date="1538296375886" expanded="true" signature="489:494" ph="..." />
+            <marker date="1538296375886" expanded="true" signature="699:812" ph="..." />
+            <marker date="1538296375886" expanded="true" signature="1381:1484" ph="..." />
           </folding>
         </state>
       </provider>
