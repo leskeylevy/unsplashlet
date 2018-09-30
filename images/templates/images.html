@@ -5,31 +5,41 @@
 <div class="container">
     {% for item in images %}
     <div class="row">
-        <img width="500px" class="image-responsive" src="{{item.image.url}}"  alt="Image" data-toggle="modal" data-target="#exampleModalCenter{{item.images.id}}" >
+        <img width="500px" class="image-responsive" src="{{item.image.url}}"  alt="Image" data-toggle="modal" data-target="#{{item.images.id}}" >
     {% endfor %}
             <!-- Modal -->
         {% for item in images %}
-<div class="modal fade" id="exampleModalCenter{{item.id.}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="{{item.images.id.}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">{{item.images.image_name}}</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">{{item.image_name}}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <img width="550px" class="image-responsive" src="{{item.image.url}}"  alt="Image" data-target="#exampleModalCenter{{item.images.id}}" >
-        <p>{{item.description }}</p>
+        <p>{{item.image_description }}</p>
           <label for="location"> Image location :{{item.location }}</label>
       </div>
       <div class="modal-footer">
+          <input class="form-control" type="text" value="{{item.image.url}}" id="link">
+          <button onclick="myFunction">Copy Link</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <!--<button type="button" class="btn btn-primary">Save changes</button>-->
       </div>
     </div>
   </div>
 </div>
+        <script>
+            function myFunction() {
+            var copyText = document.getElementById("link");
+            copyText.select();
+            document.execCommand("Copy");
+            alert("Copied the text: " + copyText.value);
+            }
+        </script>
         {% endfor %}
     </div>
 
