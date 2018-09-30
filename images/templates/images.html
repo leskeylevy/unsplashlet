@@ -5,6 +5,8 @@
 <div class="container">
     {% for item in images %}
     <div class="row">
+        <label>Location:{{item.location }}</label>
+
         <img width="500px" class="image-responsive" src="{{item.image.url}}"  alt="Image" data-toggle="modal" data-target="#exampleModalCenter{{item.images.id}}" >
     {% endfor %}
             <!-- Modal -->
