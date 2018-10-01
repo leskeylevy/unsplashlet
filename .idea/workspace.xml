@@ -52,14 +52,14 @@
           <entry key="html" value="1337" />
           <entry key="md" value="557" />
           <entry key="py" value="2833" />
-          <entry key="txt" value="9" />
+          <entry key="txt" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1337" />
           <entry key="Markdown" value="557" />
-          <entry key="PLAIN_TEXT" value="51" />
+          <entry key="PLAIN_TEXT" value="54" />
           <entry key="Python" value="2833" />
         </counts>
       </usages-collector>
