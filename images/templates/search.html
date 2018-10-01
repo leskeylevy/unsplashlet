@@ -16,7 +16,7 @@
   {% if images %}
     {% for image in images %}
       <div class="col-sm-6 col-md-3">
-          <img class="img-thumbnail" style="width: 400px; height: 400px;" src="{{image.image.url}}"  alt="Image" data-toggle="modal" data-target="#exampleModalCenter{{item.images.id}}" height="400px" width="400px" >
+          <img class="img-thumbnail" style="width: 400px; height: 400px;" src="{{image.image.url}}"  alt="Image" data-toggle="modal" data-target="#exampleModalCenter{{image.image.id}}" height="400px" width="400px" >
       </div>
     {% endfor %}
   {% endif %}
