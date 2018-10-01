@@ -7,9 +7,14 @@
     {% for item in images %}
         <div class="col-md-4">
             <label>Location:{{item.location }}</label>
-            <img class="img-thumbnail" style="width: 400px; height: 400px;" src="{{item.image.url}}"  alt="Image" data-toggle="modal" data-target="#exampleModalCenter{{item.images.id}}" height="400px" width="400px" >
-
-                <div class="modal fade" id="exampleModalCenter{{item.id.}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <img class="img-thumbnail" style="width: 400px; height: 400px;" src="{{item.image.url}}"  alt="Image" data-toggle="modal" data-target="#exampleModalCenter{{item.id}}" height="400px" width="400px" >
+        </div>
+    {% endfor %}
+    </div>
+</div>
+    {% for item in images %}
+            <!--MODAL -->
+            <div class="modal fade" id="exampleModalCenter{{item.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -19,7 +24,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <img width="550px" class="image-responsive" src="{{item.image.url}}"  alt="Image" data-target="#exampleModalCenter{{item.images.id}}" >
+                        <img class="img-thumbnail" style="width: 600px; height: 600px;" src="{{item.image.url}}"  alt="Image" data-toggle="modal" data-target="#exampleModalCenter{{item.id}}" >
                         <p>{{item.image_description }}</p>
                           <label for="location"> Image location :{{item.location }}</label>
                       </div>
@@ -40,9 +45,6 @@
                             alert("Copied the text: " + copyText.value);
                             }
                         </script>
-        </div>
-    {% endfor %}
-    </div>
 
-</div>
+    {% endfor %}
 {% endblock %}
