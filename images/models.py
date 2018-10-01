@@ -69,7 +69,8 @@ class Image(models.Model):
     def get_image(cls,id):
         image = cls.objects.get(id=id)
         return image
+
     @classmethod
-    def searched(cls, query):
-        results = cls.objects.filter(image_searched=query).order_by('pub_date')
-        return results
+    def search_by_category(cls, search_term):
+        images = cls.objects.filter(category__icontains=search_term)
+        return images
