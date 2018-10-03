@@ -3,15 +3,14 @@
       <div class="navbar-header">
         <a class="navbar-brand" href="{% url 'welcome' %}">Unsplashlet</a>
       </div>
-    <li class="nav-item dropdown">
-        <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >CATEGORIES</button>
-
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Nature</a>
-          <a class="dropdown-item" href="#">Bridges</a>
-          <a class="dropdown-item" href="#">Cities</a>
-          <a class="dropdown-item" href="#">Anime</a>
+      <li>
+          <a href="#" data-toggle="dropdown" class="dropdown-toggle" style="color:azure">Locations
+              <b class="caret"></b></a>
+            <ul class="dropdown-menu" style="background: linear-gradient(rgb(114, 235, 240), rgba(202, 92, 120, 0.5)); padding: 15px;">
+              {% for item in location %}
+              <li><a href="/location/{{item.location}}">{{item.location}}</a></li>
+              {% endfor %}
+            </ul>
       </li>
       <!-- Adding a search form  -->
       <div class="col-sm-4 col-md-4 navbar-right">

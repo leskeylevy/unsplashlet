@@ -1,0 +1,28 @@
+{%extends 'base.html' %}
+{% block content %}
+{{block.super }}
+
+
+<div class="container">
+  <div class="row">
+  <!-- Looping through news  -->
+  {% for upload in location %}
+​
+   <!-- displaying News articles -->
+   <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+​
+     
+    
+   <h4>{{upload.image_name}}</h4>
+    <img class="img-thumbnail" style="width: 400px; height: 400px;" src="{{upload.image.url}}" alt="Image" data-toggle="modal" data-target="#exampleModalCenter{{item.id}}" height="400px" width="400px">
+   <a href="#" style="text-decoration:none; color:lightseagreen"><h4 class="text-center" >category
+       {%for x in upload.category.all %}
+
+       {{x}}
+       {% endfor %}</h4></a>
+   </div>
+
+  {% endfor %}
+ </div>
+</div>
+ {% endblock %}
