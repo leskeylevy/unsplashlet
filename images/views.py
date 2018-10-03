@@ -9,10 +9,13 @@ def image(request):
     location = Location.objects.all()
     return render(request, 'images.html',{"images":images,"location":location})
 
-# def location(request):
-#     location = Location.objects.all()
-#     return render(request, 'images.html',{"location":location})
-#
+def locations(request,location_id):
+    loc = Location.objects.get(location=location_id)
+    location = Image.objects.filter(location=loc.id)
+    locs = Location.objects.all()
+    catego = Category.objects.all()
+    return render(request,'location.html',{"location":location,"catego":catego,"locs":locs})
+
 # def imagealone(request,image_id):
 #     try:
 #         image  = Image.objects.get(id=image_id)
