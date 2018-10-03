@@ -1,13 +1,17 @@
 from django.shortcuts import render
-from .models import Image
+from .models import *
 
 # Create your views here.
 
 
 def image(request):
     images = Image.objects.all()
-    return render(request, 'images.html',{"images":images})
+    location = Location.objects.all()
+    return render(request, 'images.html',{"images":images,"location":location})
 
+# def location(request):
+#     location = Location.objects.all()
+#     return render(request, 'images.html',{"location":location})
 #
 # def imagealone(request,image_id):
 #     try:
